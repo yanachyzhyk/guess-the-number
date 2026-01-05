@@ -21,7 +21,7 @@ def choose_number(num):
             
         num = int(input("Вводи еще: "))
         i += 1
-        if i > 5:
+        if i >= 5:
             print("Попытки закончились")
             break
     
@@ -44,8 +44,9 @@ while again == "да":
         num = int(input("Угадай моё число: "))
     else:
         choose_number(num)
-        again = input("Хочешь еще раз? (да/нет): ")
-print("Пока!")
+    again = input("Хочешь еще раз? (да/нет): ")
+if again != 'да':
+    print('Пока!')
 
 
 
