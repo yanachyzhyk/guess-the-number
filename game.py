@@ -6,11 +6,12 @@ print("Добро пожаловать в числовую угадайку")
 def is_valid(s):
     return s in range(1, 101)
 
+
 def choose_number(num):
     number = random.randint(1, 100)
     i = 1
     while True:
-        
+
         if num > number:
             print("Слишком много")
         elif num < number:
@@ -18,14 +19,12 @@ def choose_number(num):
         elif num == number:
             print("Ты угадал, поздравляю!")
             break
-            
+
         num = int(input("Вводи еще: "))
         i += 1
         if i >= 5:
             print("Попытки закончились")
             break
-    
-            
 
 
 num = int(input("Угадай моё число: "))
@@ -45,8 +44,5 @@ while again == "да":
     else:
         choose_number(num)
     again = input("Хочешь еще раз? (да/нет): ")
-if again != 'да':
-    print('Пока!')
-
-
-
+if again != "да":
+    print("Пока!")
